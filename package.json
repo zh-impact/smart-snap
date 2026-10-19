@@ -1,17 +1,18 @@
 {
-  "name": "wxt-react-starter",
-  "description": "manifest.json description",
+  "name": "smart-snap",
+  "description": "Capture selected web page elements into composed screenshots.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "wxt",
-    "dev:firefox": "wxt -b firefox",
-    "build": "wxt build",
-    "build:firefox": "wxt build -b firefox",
+    "dev": "wxt --mode development",
+    "dev:firefox": "wxt -b firefox --mode development",
+    "build": "wxt build --mode production",
+    "build:firefox": "wxt build -b firefox --mode production",
     "zip": "wxt zip",
     "zip:firefox": "wxt zip -b firefox",
     "compile": "tsc --noEmit",
+    "test": "bun test",
     "postinstall": "wxt prepare"
   },
   "dependencies": {

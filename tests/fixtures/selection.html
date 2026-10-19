@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Element Selection Fixture</title>
+    <style>
+      body { min-height: 1800px; font: 16px system-ui, sans-serif; }
+      .card { margin: 24px; padding: 20px; border: 1px solid #999; }
+      #unselected-sentinel { width: 180px; height: 90px; margin: 24px; background: #ff0000; }
+      #offscreen { margin-top: 1100px; }
+      #spanning { height: 1400px; margin: 24px; padding: 20px; background: #eef2ff; }
+      #fixed-nav { position: fixed; inset: 0 0 auto; z-index: 1000000; height: 80px; background: #ff0000; color: white; }
+      #pointerless-overlay { display: none; }
+      body.uncertain #pointerless-overlay {
+        display: block;
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 1000001;
+        height: 80px;
+        background: rgb(0 128 255 / 30%);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fixed-nav" style="visibility: visible !important">Fixed navigation overlay</div>
+    <div id="pointerless-overlay"></div>
+    <main>
+      <h1>Element Selection Fixture</h1>
+      <div class="card" id="first">First target</div>
+      <div id="unselected-sentinel"></div>
+      <div id="shadow-host"></div>
+      <div class="card" id="offscreen">Off-screen target</div>
+      <div id="spanning">Viewport-spanning target</div>
+    </main>
+    <script>
+      const root = document.querySelector('#shadow-host').attachShadow({ mode: 'open' });
+      root.innerHTML = '<button class="card">Open shadow target</button>';
+    </script>
+  </body>
+</html>

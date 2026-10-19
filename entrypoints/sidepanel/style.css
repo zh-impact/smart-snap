@@ -1,0 +1,150 @@
+:root {
+  color: #111827;
+  background: #f9fafb;
+  font-family: system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 260px;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+p {
+  color: #4b5563;
+  margin: 0 0 20px;
+}
+
+.occlusion-warning {
+  padding: 10px;
+  border-radius: 6px;
+  color: #92400e;
+  background: #fef3c7;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: white;
+  background: #4f46e5;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-top: 16px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+label.checkbox input {
+  width: auto;
+}
+
+select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px;
+  color: #111827;
+  background: white;
+  font: inherit;
+}
+
+h2 {
+  margin: 20px 0 8px;
+  font-size: 16px;
+}
+
+section {
+  margin: 24px 0;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px;
+  color: #111827;
+  font: inherit;
+}
+
+.selectors {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.selectors li {
+  display: grid;
+  gap: 8px;
+}
+
+.selectors code {
+  overflow-wrap: anywhere;
+}
+
+.remove-selector {
+  color: #374151;
+  background: #e5e7eb;
+}
+
+ol {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  font-size: 13px;
+}
+
+li span {
+  color: #6b7280;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 16px;
+  border: 1px solid #e5e7eb;
+}
