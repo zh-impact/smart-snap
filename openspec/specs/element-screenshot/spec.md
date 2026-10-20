@@ -1,10 +1,10 @@
-# Spec Delta
+# Element Screenshot Specification
 
 ## Purpose
 
 Lets users capture selected web-page elements, compose them into a screenshot, and reuse per-site selectors for repeat captures.
 
-## ADDED Requirements
+## Requirements
 
 ### Requirement: Users can select multiple page elements
 The extension SHALL provide a configurable keyboard shortcut that activates an element-selection mode, visibly indicate that mode on the page, and allow users to add or remove elements by clicking them. The default shortcut SHALL be Alt+Shift+C across platforms, displayed as Option+Shift+C on macOS.
@@ -18,6 +18,17 @@ The extension SHALL provide a configurable keyboard shortcut that activates an e
 - **THEN** the element is added to the selection and visibly marked
 - **WHEN** the user clicks a selected element again
 - **THEN** the element is removed from the selection
+
+### Requirement: Preview element hover during selection
+The extension SHALL highlight an eligible element under the pointer while selection mode is active, using a visual treatment distinct from the treatment for selected elements.
+
+#### Scenario: Hover an unselected element
+- **WHEN** the pointer hovers an unselected eligible element in selection mode
+- **THEN** the element receives the hover highlight without changing the selected count
+
+#### Scenario: Hover a selected element
+- **WHEN** the pointer hovers an element that is already selected
+- **THEN** it retains its selected highlight without a duplicate hover highlight
 
 ### Requirement: Users can select elements in supported page contexts
 The extension SHALL support element selection and preset resolution in the top-level document and open shadow roots of Chromium-based browsers. Iframe contents and closed shadow roots are not supported.

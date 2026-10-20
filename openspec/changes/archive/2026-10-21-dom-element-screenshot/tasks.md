@@ -9,6 +9,7 @@
 
 - [x] 2.1 Implement the configurable selection shortcut, prominent on-page indicator, add/remove click behavior, and top-level/open-shadow-root targeting; verify selection behavior with focused tests and a Chromium page fixture.
 - [x] 2.2 Connect manual selection completion to the extension panel; verify that completing a selection opens the panel with the selected targets.
+- [x] 2.3 Add a distinct hover preview highlight during selection mode; verify hover and selected styles differ, the selected count changes only on click, and hovering a selected element does not duplicate its marker in Chromium.
 
 ## 3. Capture and compose selected elements
 
